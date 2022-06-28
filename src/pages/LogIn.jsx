@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 
 function LogIn() {
   return (
     <div className="logging-page">
-      {/* <NavBar /> */}
-      {/* <img src="img/logo-allostante.png" alt="" className="nav-logo" /> */}
+      <NavBar />
 
       <div className="logging-container">
         <div className="logging-content">

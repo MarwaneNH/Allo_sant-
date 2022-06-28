@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Doctor from "../components/Doctor";
 import DoctorRDV from "../components/DoctorRDV";
-// import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 
 function Search() {
   const [docDetails, setDocDetails] = useState(false);
 
   return (
     <div className="search">
-      {/* <NavBar /> */}
+      <NavBar />
       {docDetails && <DoctorRDV setDocDetails={setDocDetails} />}
       <div className="search-input">
         <div className="search-input-container">
