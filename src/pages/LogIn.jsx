@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function LogIn() {
   return (
     <div className="logging-page">
+      <Navbar />
+      {/* <img src="img/logo-allostante.png" alt="" className="nav-logo" /> */}
 
       <div className="logging-container">
         <div className="logging-content">
@@ -13,11 +16,7 @@ function LogIn() {
             <p>Welcome back, please entre your details.</p>
           </div>
           <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-            />
+            <input type="email" name="email" placeholder="Your Email" />
             <input
               type="password"
               name="password"
@@ -25,11 +24,7 @@ function LogIn() {
               placeholder="Password"
             />
             <Link to="/">Forgot password</Link>
-            <button
-              className="sign-in-btn"
-            >
-              Sign In
-            </button>
+            <button className="sign-in-btn">Sign In</button>
             {/* <button className="google-sign-in-btn">
               <img src="../icons/google.png" alt="" height="20px" /> Sign In
               whit Google
@@ -43,9 +38,11 @@ function LogIn() {
 
       <div className="loggin-bg">
         <div className="gradient"></div>
-        <img src="https://images.unsplash.com/photo-1584464373974-258e289c42fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+        <img
+          src="../img/log-doc-img.avif"
+          alt=""
+        />
       </div>
-
     </div>
   );
 }

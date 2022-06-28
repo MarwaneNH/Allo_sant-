@@ -2,28 +2,28 @@ import React from "react";
 
 function PageContent() {
   return (
-      <div class="w3-content" style={{ maxWidth: "1100px" }}>
-        <div class="w3-row w3-padding-64" id="about">
+      <div className="w3-content" style={{ maxWidth: "1100px" }}>
+        <div className="w3-row w3-padding-64" id="about">
           <div style={{ width: "100%", height: "100px" }}></div>
-          <div id="divTxtTextDocteur" class="TextDocteur">
-            <h1 class="w3">
+          <div id="divTxtTextDocteur" className="TextDocteur">
+            <h1 className="w3">
               Docteur, êtes-vous à la pointe de la technologie ?
             </h1>
             <br />
             <p
-              class="w3-large"
+              className="w3-large"
               style={{ width: "70% !important", paddingLeft: "5% !important" }}
             >
               Découvrez la prise de rendez-vous en ligne Gérez vos
               disponibilités en toute simplicité Réduisez les rendez-vous non
               honorés Offrez une expérience exceptionnelle à tous vos patients.
             </p>
-            <button class="buttonForm" type="submit" style={{ width: "200px" }}>
+            <button className="buttonForm" type="submit" style={{ width: "200px" }}>
               Tous les services
             </button>
           </div>
 
-          <div id="divImgsTextDocteur" class="TextDocteurImgs">
+          <div id="divImgsTextDocteur" className="TextDocteurImgs">
             <table style={{ height: "px" }}>
               <tr>
                 <td>
@@ -55,10 +55,10 @@ function PageContent() {
 
         <hr />
 
-        <div class="w3-container w3-padding-64" id="contact">
-          <div class="cls3divssameline">
-            <div class="clsblocks">
-              <div class="clsdivintodivsruis">
+        <div className="w3-container w3-padding-64" id="contact">
+          <div className="cls3divssameline">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruis">
                 <center>
                   <img src="img/Medium/icon-3.png" alt="" />
                 </center>
@@ -72,8 +72,8 @@ function PageContent() {
                 </p>
               </div>
             </div>
-            <div class="clsblocks">
-              <div class="clsdivintodivsruis">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruis">
                 <center>
                   <img src="img/Medium/icon-2.png" alt="" />
                 </center>
@@ -87,8 +87,8 @@ function PageContent() {
                 </p>
               </div>
             </div>
-            <div class="clsblocks">
-              <div class="clsdivintodivsruis">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruis">
                 <center>
                   <img src="img/Medium/icon-01.png" alt="" />
                 </center>
@@ -102,14 +102,14 @@ function PageContent() {
               </div>
             </div>
           </div>
-          <div class="w3-row w3-padding-64" id="about">
-            <div id="idwhuywe" class="clswhuywe">
-              <h1 class="w3" style={{ color: "#595959", fontWeight: "bold" }}>
+          <div className="w3-row w3-padding-64" id="about">
+            <div id="idwhuywe" className="clswhuywe">
+              <h1 className="w3" style={{ color: "#595959", fontWeight: "bold" }}>
                 A propos de nous
               </h1>
               <br />
               <p
-                class="w3-large"
+                className="w3-large"
                 style={{ width: "70% !important", color: "#999999" }}
               >
                 Allosanté est un site qui permet aux utilisateurs de prendre des
@@ -119,7 +119,7 @@ function PageContent() {
                 la plus proche de vous .
               </p>
               <button
-                class="buttonForm"
+                className="buttonForm"
                 type="submit"
                 style={{ width: "200px" }}
               >
@@ -127,7 +127,7 @@ function PageContent() {
               </button>
             </div>
 
-            <div id="idwhuywevedio" class="clswhuywevedio">
+            <div id="idwhuywevedio" className="clswhuywevedio">
               <img
                 src="img/Medium/Rectangle 10.png"
                 width="100% !important"
@@ -137,20 +137,20 @@ function PageContent() {
             </div>
           </div>
 
-          <div class="w3-row w3-padding-64" id="about">
-            <div id="idwhuywe" class="clswhuywe">
+          <div className="w3-row w3-padding-64" id="about">
+            <div id="idwhuywe" className="clswhuywe">
               <img
                 src="img/Medium/Groupe 9.png"
                 width="70% !important"
                 alt=""
               />
             </div>
-            <div id="idwhuywevedio" class="clswhuywevedio">
-              <h1 class="w3" style={{ color: "#595959", fontWeight: "bold" }}>
+            <div id="idwhuywevedio" className="clswhuywevedio">
+              <h1 className="w3" style={{ color: "#595959", fontWeight: "bold" }}>
                 Pourquoi nous choisir ?
               </h1>
               <br />
-              <p class="w3-large" style={{ color: "#999999" }}>
+              <p className="w3-large" style={{ color: "#999999" }}>
                 Allosanté permet a ses utilisateurs de prendre un rendez-vous
                 chez les medcins les plus proches , avec un simple formulaire
                 médical en ligne qui simplifie le processus , en recueillant des
@@ -163,12 +163,12 @@ function PageContent() {
             </div>
           </div>
 
-          <div class="w3-row w3-padding-64" id="about">
+          <div className="w3-row w3-padding-64" id="about">
             <div>
-              <h1 class="w3" style={{ color: "#595959", fontWeight: "bold" }}>
+              <h1 className="w3" style={{ color: "#595959", fontWeight: "bold" }}>
                 Nos medcins les plus reputé
               </h1>
-              <p class="w3-large" style={{ color: "#999999" }}>
+              <p className="w3-large" style={{ color: "#999999" }}>
                 Ci-dessous les medcins les plus fréquentés par nos utilisateurs
               </p>
               <br />
@@ -177,12 +177,12 @@ function PageContent() {
             </div>
           </div>
 
-          <div class="cls3divssameline">
-            <div class="clsblocks">
-              <div class="clsdivintodivsruisdoc">
+          <div className="cls3divssameline">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruisdoc">
                 <img
                   src="img/Medium/Capture1.PNG"
-                  class="clsimgdocteurs"
+                  className="clsimgdocteurs"
                   alt=""
                 />
                 <center>
@@ -193,11 +193,11 @@ function PageContent() {
                 </center>
               </div>
             </div>
-            <div class="clsblocks">
-              <div class="clsdivintodivsruisdoc">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruisdoc">
                 <img
                   src="img/Medium/Capture.PNG"
-                  class="clsimgdocteurs"
+                  className="clsimgdocteurs"
                   alt=""
                 />
                 <center>
@@ -208,12 +208,12 @@ function PageContent() {
                 </center>
               </div>
             </div>
-            <div class="clsblocks">
-              <div class="clsdivintodivsruisdoc">
+            <div className="clsblocks">
+              <div className="clsdivintodivsruisdoc">
                 <img
                   src="img/Medium/200x200.png"
                   alt=""
-                  class="clsimgdocteurs"
+                  className="clsimgdocteurs"
                 />
                 <center>
                   <h6 style={{ color: "#595959", fontWeight: "bold" }}>

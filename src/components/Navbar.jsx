@@ -17,26 +17,26 @@ function Navbar() {
   }, []);
 
   return (
-    <div class="w3-top">
+    <div className="w3-top">
       <nav ref={navbar}>
-        <div class="clsMenuHeader" style={{ letterSpacing: "2px" }}>
-          <Link to="/" class="w3-bar-item w3-button">
+        <div className="clsMenuHeader" style={{ letterSpacing: "2px" }}>
+          <Link to="/" className="w3-bar-item w3-button">
             Accueil
           </Link>
           {/* Right-sided navbar links. Hide them on small screens */}
-          <a href="#about" class="w3-bar-item w3-button">
+          <a href="#about" className="w3-bar-item w3-button">
             A propos
           </a>
-          <a href="#menu" class="w3-bar-item w3-button">
+          <a href="#menu" className="w3-bar-item w3-button">
             Questions Fréquentes
           </a>
-          <a href="#contact" class="w3-bar-item w3-button">
+          <a href="#contact" className="w3-bar-item w3-button">
             Contactez-nous
           </a>
 
-          <div class="w3-right w3-hide-small"></div>
+          <div className="w3-right w3-hide-small"></div>
         </div>
-        <div class="clsMenuHeaderButtons">
+        <div className="clsMenuHeaderButtons">
           <ul>
             <Link to='/logup'>
               <img src="img/Groupe14.png" alt="" />
@@ -46,7 +46,7 @@ function Navbar() {
             </Link>
           </ul>
         </div>
-        <div class="clsLogo">
+        <div className="clsLogo">
           <Link to='/registration'>
             <img src="img/logo-allostante.png" alt="" />
           </Link>

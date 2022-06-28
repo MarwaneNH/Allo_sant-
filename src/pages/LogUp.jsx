@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function LogUp() {
+  const [isAdmin, setIsAdmin] = useState();
+
   return (
     <div className="logging-page">
+      <Navbar />
 
       <div className="logging-container">
         <div className="logging-content">
@@ -19,6 +23,24 @@ function LogUp() {
             <input type="text" name="lastName" placeholder="Last Name" />
             <input type="email" name="email" placeholder="Your Email" />
             <input type="tele" name="phone" placeholder="Phone" />
+            <div>
+              <label htmlFor="isDoctor">Je suis docteur</label>
+              <input
+                onChange={(e) => {
+                  setIsAdmin(e.target.checked);
+                }}
+                type="checkbox"
+                name="isDoctor"
+                id="isDoctor"
+              />
+            </div>
+            {isAdmin && (
+              <>
+                <input type="text" name="street" placeholder="Rue" />
+                <input type="text" name="city" placeholder="Ville" />
+                <input type="text" name="speciality" placeholder="Spécialité" />
+              </>
+            )}
             <input
               type="password"
               name="password"
@@ -38,7 +60,7 @@ function LogUp() {
 
       <div className="loggin-bg">
         <div className="gradient"></div>
-        <img src="https://images.unsplash.com/photo-1584464373974-258e289c42fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+        <img src="../img/log-doc-img.avif" alt="" />
       </div>
     </div>
   );
