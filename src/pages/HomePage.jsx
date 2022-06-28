@@ -2,12 +2,12 @@ import React from "react";
 import Header from "../components/HomeHeader";
 import PageContent from "../components/HomeContent";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 
 function HomePage() {
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <Header />
       <PageContent />
       <Footer />

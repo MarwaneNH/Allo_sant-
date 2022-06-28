@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 
 function LogIn() {
   return (
     <div className="logging-page">
-      <NavBar />
+      <Navbar />
 
       <div className="logging-container">
         <div className="logging-content">
