@@ -24,7 +24,7 @@ function PageContent() {
           </div>
 
           <div id="divImgsTextDocteur" className="TextDocteurImgs">
-            <table style={{ height: "px" }}>
+            {/* <table style={{ height: "px" }}>
               <tr>
                 <td>
                   <img src="img/Pharmacie.png" alt="" />
@@ -49,7 +49,7 @@ function PageContent() {
                   <img src="img/Centre-Hospitalier-Mohamed-VI.png" alt="" />
                 </td>
               </tr>
-            </table>
+            </table> */}
           </div>
         </div>
 

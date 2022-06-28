@@ -42,7 +42,7 @@ function Header() {
           <input type="email" placeholder="choisir Dr" className="inputForm" />
           <br />
           <input
-            type="password"
+            type="text"
             placeholder="choisir une pharmacie"
             className="inputForm"
           />
