@@ -8,7 +8,7 @@ function Search() {
 
   return (
     <div className="search">
-      <NavBar />
+      {/* <NavBar /> */}
       {docDetails && <DoctorRDV setDocDetails={setDocDetails} />}
       <div className="search-input">
         <div className="search-input-container">

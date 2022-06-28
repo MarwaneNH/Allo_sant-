@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 function LogIn() {
   return (
     <div className="logging-page">
-      <NavBar />
+      {/* <NavBar /> */}
       {/* <img src="img/logo-allostante.png" alt="" className="nav-logo" /> */}
 
       <div className="logging-container">

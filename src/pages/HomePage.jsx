@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 function HomePage() {
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar /> */}
       <Header />
       <PageContent />
       <Footer />

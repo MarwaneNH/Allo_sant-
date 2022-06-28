@@ -7,7 +7,7 @@ function LogUp() {
 
   return (
     <div className="logging-page">
-      <NavBar />
+      {/* <NavBar /> */}
 
       <div className="logging-container">
         <div className="logging-content">
