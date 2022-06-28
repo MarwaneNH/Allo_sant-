@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/HomeHeader';
-import NavBar from '../components/NavBar';
+// import NavBar from '../components/NavBar';
 import PageContent from '../components/HomeContent';
 import Footer from '../components/Footer';
 

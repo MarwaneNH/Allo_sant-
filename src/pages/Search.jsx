@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Doctor from "../components/Doctor";
 import DoctorRDV from "../components/DoctorRDV";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 function Search() {
   const [docDetails, setDocDetails] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 function LogUp() {
   const [isAdmin, setIsAdmin] = useState();
