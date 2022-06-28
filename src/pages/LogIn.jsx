@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 
 function LogIn() {
   return (
     <div className="logging-page">
-      <Navbar />
+      <NavBar />
       {/* <img src="img/logo-allostante.png" alt="" className="nav-logo" /> */}
 
       <div className="logging-container">

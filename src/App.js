@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import LogIn from "./pages/LogIn";
 import LogUp from "./pages/LogUp";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index path="/registration" element={<LoginPage />} />
           <Route index path="/login" element={<LogIn />} />
           <Route index path="/logup" element={<LogUp />} />
+          <Route index path="/recherche" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>

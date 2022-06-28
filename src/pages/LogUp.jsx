@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 
 function LogUp() {
   const [isAdmin, setIsAdmin] = useState();
 
   return (
     <div className="logging-page">
-      <Navbar />
+      <NavBar />
 
       <div className="logging-container">
         <div className="logging-content">

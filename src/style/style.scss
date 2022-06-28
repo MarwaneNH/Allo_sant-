@@ -1,0 +1,168 @@
+$white: #f8fafc;
+$blue-ligth: #dce0e6;
+$blue-satured: #5cd1e3;
+$blue: #2c72dc;
+$blue-dark: #254b84;
+$black: #3e4653;
+.logging-page {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $blue-dark;
+
+  .loggin-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    background-color: $blue-dark;
+    z-index: 1;
+
+    .gradient {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        90deg,
+        $blue-dark 60%,
+        rgba($color: $blue-dark, $alpha: 0) 100%
+      );
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: -100px;
+      height: 130%;
+      z-index: -1;
+    }
+  }
+
+  .logging-container {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    padding-left: 30px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    align-items: center;
+
+    .logging-content {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      color: rgba(255, 255, 255, 1);
+
+      a {
+        margin: 10px 10px 10px auto;
+        color: $blue;
+        font-size: 11pt;
+      }
+
+      .title {
+        margin: 20px 0;
+        p {
+          color: rgba(255, 255, 255, 0.4);
+          padding-left: 20px;
+          font-size: 12pt;
+          font-weight: 280;
+          margin: 5px 0 0 0;
+        }
+        h1 {
+          font-size: 34pt;
+          margin: 5px 0 0 0;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 360px;
+        padding: 10px 30px 10px 30px;
+
+        input {
+          width: 100%;
+          outline: none;
+          font-family: "Poppins";
+          border-radius: 10px;
+          padding: 10px 14px;
+          margin: 10px 0;
+          color: white;
+          border: 1px solid rgba($color: $white, $alpha: 0.25);
+          background-color: rgba($color: $white, $alpha: 0.07);
+
+          &::placeholder {
+            color: white;
+            opacity: 0.5;
+            font-weight: 280;
+          }
+        }
+
+        input[name="firstName"],
+        input[name="lastName"] {
+          width: 46%;
+        }
+
+        .sign-in-btn {
+          width: 100%;
+          cursor: pointer;
+          background-color: $blue;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: white;
+          line-height: 35px;
+          margin: 20px 0 0 0;
+        }
+
+        .sign-up-btn {
+          width: 200px;
+          cursor: pointer;
+          background-color: $blue;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: white;
+          line-height: 35px;
+          margin: 20px auto 0 auto;
+        }
+        .google-sign-in-btn {
+          width: 100%;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: $black;
+          line-height: 35px;
+          margin: 10px 0 0 0;
+
+          img {
+            height: 18px;
+            margin-right: 10px;
+          }
+        }
+        p {
+          color: rgba($color: white, $alpha: 0.4);
+          font-size: 10pt;
+          font-weight: 280;
+          margin: 25px auto 0 auto;
+        }
+      }
+    }
+  }
+}

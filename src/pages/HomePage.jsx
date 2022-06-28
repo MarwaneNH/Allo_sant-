@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../components/HomeHeader';
-import Navbar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import PageContent from '../components/HomeContent';
 import Footer from '../components/Footer';
 
 function HomePage() {
   return (
     <div className="App">
-      <Navbar />
+      <NavBar />
       <Header />
       <PageContent />
       <Footer />

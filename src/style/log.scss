@@ -1,0 +1,710 @@
+$white: #f8fafc;
+$orange: #ff5e20;
+$blue: #3498db;
+$black: #0d364d;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  overflow-x: hidden;
+  color: $black;
+
+  *::first-letter {
+    text-transform: uppercase;
+  }
+  a,
+  button {
+    font-family: "poppins";
+    font-weight: 400;
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  *,
+  :after,
+  :before {
+    box-sizing: inherit;
+  }
+}
+.navbar {
+  height: 80px;
+  width: 100vw;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba($color: $black, $alpha: 0.15);
+  transition: all 200ms ease;
+
+  nav {
+    width: 100%;
+    height: 80px;
+    max-width: 1380px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      list-style: none;
+      transform: translate(-50%, 0);
+
+      li {
+        padding: 20px;
+        margin: 0 5px;
+        a {
+          opacity: 0.5;
+          color: $black;
+          transition: all 200ms ease;
+          font-size: 14px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .log-section {
+      .log-btn {
+        .log-in-btn {
+          background-color: transparent;
+          color: $orange;
+          padding: 5px 10px;
+          border: none;
+          margin: 0 10px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .log-up-btn {
+          background-color: transparent;
+          color: $orange;
+          padding: 5px 10px;
+          border: 1px solid $orange;
+          border-radius: 4px;
+          margin: 0 10px;
+
+          &:hover {
+            background-color: $orange;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+.logging-page {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $black;
+
+  .loggin-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    background-color: $black;
+    z-index: 0;
+
+    .gradient {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(
+        90deg,
+        $black 60%,
+        rgba($color: $black, $alpha: 0) 100%
+      );
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: -100px;
+      height: 130%;
+      z-index: -1;
+    }
+  }
+
+  .logging-container {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 100px 0 50px 30px;
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+
+    .logging-content {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      color: rgba(255, 255, 255, 1);
+
+      a {
+        margin: 10px 10px 10px auto;
+        color: $blue;
+        font-size: 11pt;
+      }
+
+      .title {
+        margin: 20px 0;
+        p {
+          color: rgba(255, 255, 255, 0.4);
+          padding-left: 20px;
+          font-size: 12pt;
+          font-weight: 280;
+          margin: 5px 0 0 0;
+        }
+        h1 {
+          font-size: 34pt;
+          margin: 5px 0 0 0;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 360px;
+        padding: 10px 30px 10px 30px;
+
+        > div {
+          width: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px 0;
+          padding-left: 10px;
+
+          > label {
+            width: inherit;
+          }
+          > input {
+            width: auto;
+            margin: auto 60px;
+          }
+        }
+
+        input {
+          width: 100%;
+          outline: none;
+          font-family: "Poppins";
+          border-radius: 10px;
+          padding: 10px 14px;
+          margin: 10px 0;
+          color: white;
+          border: 1px solid rgba($color: $white, $alpha: 0.25);
+          background-color: rgba($color: $white, $alpha: 0.07);
+
+          &::placeholder {
+            color: white;
+            opacity: 0.5;
+            font-weight: 280;
+          }
+        }
+
+        input[name="city"],
+        input[name="street"],
+        input[name="firstName"],
+        input[name="lastName"] {
+          width: 46%;
+        }
+
+        .sign-in-btn {
+          width: 100%;
+          cursor: pointer;
+          background-color: $orange;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: white;
+          line-height: 35px;
+          margin: 20px 0 0 0;
+        }
+
+        .sign-up-btn {
+          width: 200px;
+          cursor: pointer;
+          background-color: $orange;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: white;
+          line-height: 35px;
+          margin: 20px auto 0 auto;
+        }
+        .google-sign-in-btn {
+          width: 100%;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border: none;
+          border-radius: 10px;
+          font-family: "Poppins";
+          color: $black;
+          line-height: 35px;
+          margin: 10px 0 0 0;
+
+          img {
+            height: 18px;
+            margin-right: 10px;
+          }
+        }
+        p {
+          color: rgba($color: white, $alpha: 0.4);
+          font-size: 10pt;
+          font-weight: 280;
+          margin: 25px auto 0 auto;
+        }
+      }
+    }
+  }
+}
+.search {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 80px;
+
+  .search-input {
+    width: 100%;
+    background-color: rgba($color: $blue, $alpha: 0.5);
+    padding: 30px 0;
+    .search-input-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        input,
+        select {
+          width: 250px;
+          border-radius: 6px;
+          padding: 6px 10px;
+          text-transform: capitalize;
+          font-family: "poppins";
+          border: 1px solid rgba($color: $black, $alpha: 0.3);
+          box-shadow: 0 0 8px rgba($color: $black, $alpha: 0.2);
+          color: rgba($color: $black, $alpha: 0.6);
+          outline: none;
+          &::placeholder {
+            color: rgba($color: $black, $alpha: 0.6);
+          }
+        }
+      }
+      button {
+        margin-top: 30px;
+        height: 34px;
+        width: 120px;
+        background-color: $orange;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+    }
+  }
+  .result {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.048);
+    min-height: calc(100vh - 80px - 130px);
+    display: flex;
+    flex-direction: column;
+    padding: 40px calc((100vw - 1000px) / 2);
+
+    > p {
+      transform: translateX(-15px);
+    }
+
+    .result-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+
+      .result-item {
+        background-color: white;
+        box-shadow: 0 0 10px rgba($color: $black, $alpha: 0.1);
+        width: 230px;
+        height: 320px;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all 200ms ease;
+
+        &:hover {
+          background-color: $blue;
+
+          p,
+          h4 {
+            color: white;
+          }
+        }
+
+        .item-img {
+          height: 120px;
+          width: 100%;
+          img {
+            object-fit: cover;
+            object-position: 50% 10%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .item-content {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: calc(100% - 100px - 20px);
+
+          * {
+            margin: 0;
+          }
+
+          .title {
+            display: flex;
+            flex-direction: column;
+
+            div {
+              display: flex;
+              justify-content: space-between;
+              align-items: baseline;
+
+              span {
+                background-color: white;
+                border: 2px solid #50d61b;
+                color: #50d61b;
+                font-weight: 700;
+                border-radius: 4px;
+                font-size: 10px;
+                height: 18px;
+                padding: 0 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+            p {
+              opacity: 0.6;
+              font-size: 14px;
+            }
+          }
+          .detail {
+            padding-top: 10px;
+            opacity: 0.6;
+
+            p {
+              padding-top: 5px;
+              font-size: 11px;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          line-height: 35px;
+          border: 1px solid rgba($color: $black, $alpha: 0.1);
+          background-color: white;
+          border-radius: 6px;
+          font-weight: 500;
+
+          &:hover {
+            background-color: rgb(238, 238, 238);
+          }
+        }
+      }
+    }
+  }
+}
+.doctor-rdv {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 999;
+
+  .bg {
+    background-color: rgba(0, 0, 0, 0.308);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .rdv-container {
+    background-color: white;
+    position: relative;
+    border-radius: 25px;
+    height: 600px;
+    width: 1000px;
+    padding: 50px;
+    display: flex;
+
+    .close-btn {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      right: 30px;
+      top: 30px;
+      opacity: 0.5;
+      transition: all 200ms ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: rgb(90, 90, 90);
+        left: 50%;
+        top: 50%;
+        border-radius: 2px;
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    .doctor {
+      width: 320px;
+      min-width: 320px;
+
+      .item-img {
+        width: 100%;
+        height: 180px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          object-position: 50% 10%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .title {
+        margin-top: 40px;
+        * {
+          margin: 0;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h1 {
+            font-size: 30px;
+            font-weight: 600;
+          }
+          span {
+            text-transform: uppercase;
+            background-color: white;
+            border: 2px solid #50d61b;
+            color: #50d61b;
+            font-weight: 700;
+            border-radius: 4px;
+            font-size: 14px;
+            height: 25px;
+            padding: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        p {
+          padding-left: 20px;
+          opacity: 0.6;
+        }
+      }
+
+      .content {
+        p {
+          text-indent: 5px;
+          font-size: 12px;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    hr {
+      height: 80%;
+      border: none;
+      border-left: 1px solid rgba($color: $black, $alpha: 0.2);
+      margin: auto 60px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .title {
+        text-align: center;
+        margin-bottom: 40px;
+        h1 {
+          margin-bottom: 0;
+        }
+        p {
+          margin: 0;
+          font-size: 14px;
+          opacity: 0.5;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > div {
+          display: flex;
+          justify-content: space-between;
+          gap: 40px;
+        }
+        .description {
+          gap: 0;
+          display: flex;
+          flex-direction: column;
+
+          textarea {
+            height: 80px;
+          }
+        }
+
+        label {
+          font-weight: 500;
+        }
+        input,
+        textarea {
+          margin-top: 10px;
+          margin-bottom: 15px;
+          border: 1px solid rgba($color: $black, $alpha: 0.2);
+          border-radius: 4px;
+          box-shadow: 0 0 6px rgba($color: $black, $alpha: 0.15);
+          padding: 7px 10px;
+          font-family: "poppins";
+          outline: none;
+
+          &::placeholder {
+            font-family: "poppins";
+            opacity: 0.4;
+          }
+        }
+        .malade {
+          input {
+            width: 250px;
+          }
+        }
+        .horaire {
+          input {
+            width: 100%;
+          }
+        }
+        button {
+          margin: 30px auto 0 auto;
+          width: 120px;
+          background-color: $orange;
+          color: white;
+          border: none;
+          line-height: 32px;
+          border-radius: 6px;
+          transition: all 200ms ease;
+
+          &:hover {
+            box-shadow: 0 0 15px rgba($color: $orange, $alpha: 0.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---------Log---------
+@media only screen and (max-width: 750px) {
+  .logging-page .loggin-bg {
+    display: none;
+  }
+  .logging-page .logging-container {
+    padding: 120px 20px 30px 20px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    align-items: flex-start;
+  }
+  .logging-page .logging-container .logging-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .logging-page .logging-container .logging-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+  }
+  .logging-page .logging-container .logging-content form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 30px 10px 30px;
+  }
+}
+// ---------General class---------
+.hide {
+  display: none;
+}
+.inactive {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}

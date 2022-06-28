@@ -1,59 +1,43 @@
 import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
-  const navbar = useRef();
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 0) {
-        navbar.current.classList.add("scrolled");
-      } else {
-        navbar.current.classList.remove("scrolled");
-      }
-    });
-  }, []);
-
+function NavBar() {
   return (
-    <div className="w3-top">
-      <nav ref={navbar}>
-        <div className="clsMenuHeader" style={{ letterSpacing: "2px" }}>
-          <Link to="/" className="w3-bar-item w3-button">
-            Accueil
-          </Link>
-          {/* Right-sided navbar links. Hide them on small screens */}
-          <a href="#about" className="w3-bar-item w3-button">
-            A propos
-          </a>
-          <a href="#menu" className="w3-bar-item w3-button">
-            Questions Fréquentes
-          </a>
-          <a href="#contact" className="w3-bar-item w3-button">
-            Contactez-nous
-          </a>
-
-          <div className="w3-right w3-hide-small"></div>
-        </div>
-        <div className="clsMenuHeaderButtons">
-          <ul>
-            <Link to='/logup'>
-              <img src="img/Groupe14.png" alt="" />
+    <div className="navbar">
+      <nav>
+        <Link to="/">
+          <img src="../icon/logo.svg" alt="allo santé logo" height="46px" />
+        </Link>
+        <ul>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/">à propos</Link>
+          </li>
+          <li>
+            <Link to="/">Question fréquentes</Link>
+          </li>
+          <li>
+            <Link to="/">Contactez-nous</Link>
+          </li>
+        </ul>
+        <div className="log-section">
+          <div className="log-btn">
+            <Link to="/login">
+              <button className="log-in-btn">Log In</button>
             </Link>
-            <Link to='/login'>
-              <img src="img/Groupe1.png" alt="" />
+            <Link to="/logup">
+              <button className="log-up-btn">Register</button>
             </Link>
-          </ul>
-        </div>
-        <div className="clsLogo">
-          <Link to='/registration'>
-            <img src="img/logo-allostante.png" alt="" />
-          </Link>
+          </div>
+          <div className="log-user hide">
+            <img src="../icon/user-img.svg" alt="" height="60px" />
+          </div>
         </div>
       </nav>
     </div>
   );
 }
 
-export default Navbar;
+export default NavBar;

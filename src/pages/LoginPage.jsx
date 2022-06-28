@@ -2,12 +2,12 @@ import React from 'react'
 import Footer from '../components/Footer'
 import LoginContent from '../components/LoginContent'
 import LoginHeader from '../components/LoginHeader'
-import Navbar from '../components/Navbar'
+import NavBar from '../components/NavBar'
 
 function LoginPage() {
   return (
     <div>
-        <Navbar />
+        <NavBar />
         <LoginHeader />
         <LoginContent />
         <Footer />
