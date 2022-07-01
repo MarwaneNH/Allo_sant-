@@ -36,16 +36,16 @@ function Dashboard() {
               Agenda
             </li>
           </Link>
-          <Link to="/admin">
+          <Link to="products">
             <li onClick={activeClass}>Mes Patients</li>
           </Link>
-          <Link to="/admin">
+          <Link to="products">
             <li onClick={activeClass}>Demande</li>
           </Link>
-          <Link to="/admin">
+          <Link to="products">
             <li onClick={activeClass}>Historique</li>
           </Link>
-          <Link to="/admin">
+          <Link to="products">
             <li onClick={activeClass}>Compte</li>
           </Link>
         </ul>
@@ -54,8 +54,8 @@ function Dashboard() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Agenda />} />
-        <Route exact path="/agenda" element={<Agenda />} />
+        <Route exact path="/" element={<Agenda />} />
+        <Route path="/agenda" element={<Agenda />} />
         <Route path="/products" element={<Products />} />
         {/* <Route exact path="/orders" element={<Orders />} /> */}
       </Routes>
