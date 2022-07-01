@@ -54,7 +54,7 @@ function Dashboard() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Products />} />
+        <Route path="/" element={<Agenda />} />
         <Route exact path="/agenda" element={<Agenda />} />
         <Route path="/products" element={<Products />} />
         {/* <Route exact path="/orders" element={<Orders />} /> */}
