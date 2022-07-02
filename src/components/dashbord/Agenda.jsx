@@ -95,7 +95,7 @@ function Agenda() {
                 <div></div>
               </div>
             </div>
-            <div className="small-rdv">
+            <div className="small-rdv passe">
               <div className="time">10:00 - 11:00</div>
               <div className="user">
                 <div className="user-img">
@@ -119,20 +119,9 @@ function Agenda() {
       </div>
       <div className="next-rdv">
         <h2>Prochain RDV</h2>
-        <div className="rdv">
-          
-        </div>
+        <div className="rdv"></div>
       </div>
-      <div className="date-container">
-        <div className="date">
-          <img src="../icon/date.svg" alt="" />
-          <span>Lun, 16 Mars</span>
-        </div>
-        <div className="time">
-          <img src="../icon/time.svg" alt="" />
-          <span>09:32</span>
-        </div>
-      </div>
+
     </div>
   );
 }

@@ -1061,7 +1061,6 @@ body {
               display: flex;
               align-items: center;
               .user-img {
-                background-color: gray;
                 border-radius: 50%;
                 height: 32px;
                 width: 32px;
@@ -1153,6 +1152,138 @@ body {
               }
             }
           }
+
+          .passe {
+            background-color: rgba(128, 128, 128, 0.089);
+            box-shadow: none !important;
+            cursor: default;
+          }
+        }
+      }
+
+      // Patients
+      .patient-container {
+        position: relative;
+        height: 78vh;
+
+        .scroll-gradienty {
+          pointer-events: none;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: 999;
+          bottom: 0;
+          right: 0;
+          background: red;
+          background: linear-gradient(
+            180deg,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(245, 245, 245, 1) 20px,
+            rgba(245, 245, 245, 0) 60px,
+            rgba(245, 245, 245, 0) calc(100% - 50px),
+            rgba(245, 245, 245, 1) calc(100% - 20px),
+            rgba(245, 245, 245, 1) 100%
+          );
+        }
+
+        .wrapper {
+          height: 100%;
+          width: calc(100% - 120px);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          padding: 60px 10px 10px 10px;
+          margin: 0 60px;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          overflow-y: scroll;
+          position: relative;
+          flex-direction: row;
+          align-content: flex-start;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .patient {
+          background-color: white;
+          border-radius: 6px;
+          box-shadow: 2px 2px 10px rgba($color: $black, $alpha: 0.05);
+          height: 220px;
+          width: 185px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          cursor: pointer;
+          transition: all 200ms ease;
+
+          .item-img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 5px 0 10px 0;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+
+          h4 {
+            margin: 5px 0;
+          }
+
+          p {
+            font-size: 14px;
+            opacity: 0.6;
+            margin: 0 0 10px 0;
+          }
+
+          .item-detail {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+
+            > div {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+
+              div {
+                height: 32px;
+                width: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                border: 1px rgba($color: $black, $alpha: 0.3) solid;
+                border-radius: 6px;
+                font-weight: 700;
+                font-size: 14px;
+              }
+              .oui {
+                color: #23c85a;
+              }
+              .non {
+                color: #eb6666;
+              }
+              small {
+                white-space: nowrap;
+                font-size: 10px;
+                opacity: 0.6;
+                margin-top: 6px;
+              }
+            }
+          }
+
+          &:hover {
+            box-shadow: 0 0 10px 3px rgba($color: $black, $alpha: 0.1);
+          }
         }
       }
     }
@@ -1175,25 +1306,27 @@ body {
         background-color: white;
       }
     }
-    .date-container {
-      position: absolute;
+  }
+
+  .date-container {
+    position: absolute;
+    display: flex;
+    right: 100px;
+    top: 40px;
+    gap: 30px;
+    text-transform: capitalize;
+
+    > div {
       display: flex;
-      right: 100px;
-      top: 40px;
-      gap: 30px;
+      align-items: center;
 
-      > div {
-        display: flex;
-        align-items: center;
+      span {
+        font-weight: 600;
+        margin-left: 10px;
+      }
 
-        span {
-          font-weight: 600;
-          margin-left: 10px;
-        }
-
-        img {
-          height: 20px;
-        }
+      img {
+        height: 20px;
       }
     }
   }

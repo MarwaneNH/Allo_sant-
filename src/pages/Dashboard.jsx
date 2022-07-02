@@ -1,7 +1,11 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Agenda from "../components/dashbord/Agenda";
-import Products from "../components/dashbord/Products";
+import Patients from "../components/dashbord/Patients";
+import Demande from "../components/dashbord/Demande";
+import Historique from "../components/dashbord/Historique";
+import Compte from "../components/dashbord/Compte";
+import DateHeader from "../components/dashbord/DateHeader";
 
 function Dashboard() {
   const activeClass = (e) => {
@@ -36,16 +40,16 @@ function Dashboard() {
               Agenda
             </li>
           </Link>
-          <Link to="products">
+          <Link to="patients">
             <li onClick={activeClass}>Mes Patients</li>
           </Link>
-          <Link to="products">
+          <Link to="demande">
             <li onClick={activeClass}>Demande</li>
           </Link>
-          <Link to="products">
+          <Link to="historique">
             <li onClick={activeClass}>Historique</li>
           </Link>
-          <Link to="products">
+          <Link to="compte">
             <li onClick={activeClass}>Compte</li>
           </Link>
         </ul>
@@ -53,11 +57,15 @@ function Dashboard() {
         <button>Se déconneter</button>
       </div>
 
+      <DateHeader />
+
       <Routes>
         <Route exact path="/" element={<Agenda />} />
         <Route path="/agenda" element={<Agenda />} />
-        <Route path="/products" element={<Products />} />
-        {/* <Route exact path="/orders" element={<Orders />} /> */}
+        <Route path="/patients" element={<Patients />} />
+        <Route path="/demande" element={<Demande />} />
+        <Route path="/historique" element={<Historique />} />
+        <Route path="/compte" element={<Compte />} />
       </Routes>
     </div>
   );
