@@ -11,7 +11,7 @@ function Patients() {
           </div>
         </div>
 
-        <div className="patient-container">
+        <div className="div-container">
           <div className="scroll-gradienty"></div>
 
           <div className="wrapper">

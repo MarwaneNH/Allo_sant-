@@ -3,27 +3,28 @@ import React, { useEffect, useState } from "react";
 function DateHeader() {
   const [todayDate, setTodayDate] = useState({ date: "", time: "" });
 
-  useEffect(() => {
-    // Date
-    const toggleDate = () => {
-      const date = new Date();
-      const options = {
-        weekday: "short",
-        month: "short",
-        day: "2-digit",
-        hour: "numeric",
-        minute: "numeric",
-      };
-      const frDate = date.toLocaleDateString("fr-FR", options);
-      const formatedDate = frDate.slice(0, 3) + ", " + frDate.slice(4, -8);
-      const formatedTime = frDate.slice(-5);
-      setTodayDate({ time: formatedTime, date: formatedDate });
+  // useEffect(() => {
+  // Date
+  const toggleDate = () => {
+    const date = new Date();
+    const options = {
+      weekday: "short",
+      month: "short",
+      day: "2-digit",
+      hour: "numeric",
+      minute: "numeric",
     };
+    const frDate = date.toLocaleDateString("fr-FR", options);
+    const formatedDate = frDate.slice(0, 3) + ", " + frDate.slice(4, -8);
+    const formatedTime = frDate.slice(-5);
+    setTodayDate({ time: formatedTime, date: formatedDate });
+    // console.log(1);
+  };
+  // toggleDate();
+  // }, []);
+  setTimeout(() => {
     toggleDate();
-    setTimeout(() => {
-      toggleDate();
-    }, 1000);
-  }, []);
+  }, 1000);
 
   return (
     <div className="date-container">
