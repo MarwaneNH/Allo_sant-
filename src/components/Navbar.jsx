@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const nav = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 0) nav.current.classList.add("scrolled");
+      if (window.pageYOffset === 0) nav.current.classList.remove("scrolled");
+    });
+  });
+
   return (
-    <div className="navbar">
+    <div className="navbar" ref={nav}>
       <nav>
         <Link to="/">
           <img src="../icon/logo.svg" alt="allo santé logo" height="46px" />

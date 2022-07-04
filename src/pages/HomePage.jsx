@@ -1,15 +1,15 @@
 import React from "react";
-import Header from "../components/HomeHeader";
-import PageContent from "../components/HomeContent";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import MainContent from "../components/MainContent";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
-    <div className="App">
+    <div className="main">
       <Navbar />
       <Header />
-      <PageContent />
+      <MainContent />
       <Footer />
     </div>
   );

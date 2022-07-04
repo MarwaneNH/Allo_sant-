@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Doctor from "../components/Doctor";
 import DoctorRDV from "../components/DoctorRDV";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Search() {
   const [docDetails, setDocDetails] = useState(false);
@@ -47,6 +48,7 @@ function Search() {
           <Doctor setDocDetails={setDocDetails} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

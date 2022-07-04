@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function DateHeader() {
   const [todayDate, setTodayDate] = useState({ date: "", time: "" });
 
-  // useEffect(() => {
-  // Date
   const toggleDate = () => {
     const date = new Date();
     const options = {
@@ -18,10 +16,8 @@ function DateHeader() {
     const formatedDate = frDate.slice(0, 3) + ", " + frDate.slice(4, -8);
     const formatedTime = frDate.slice(-5);
     setTodayDate({ time: formatedTime, date: formatedDate });
-    // console.log(1);
   };
-  // toggleDate();
-  // }, []);
+  
   setTimeout(() => {
     toggleDate();
   }, 1000);
