@@ -21,13 +21,13 @@ function Navbar() {
             <Link to="/">Accueil</Link>
           </li>
           <li>
-            <Link to="/">à propos</Link>
+            <Link to="/about">à propos</Link>
           </li>
           <li>
-            <Link to="/">Question fréquentes</Link>
+            <Link to="/question-frequente">Question fréquentes</Link>
           </li>
           <li>
-            <Link to="/">Contactez-nous</Link>
+            <Link to="/contactus">Contactez-nous</Link>
           </li>
         </ul>
         <div className="log-section">

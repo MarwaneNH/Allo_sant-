@@ -5,6 +5,9 @@ import LogUp from "./pages/LogUp";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Search from "./pages/Search";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import QstF from "./pages/QstF";
+import Contactus from "./pages/Contactus";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route index path="/logup" element={<LogUp />} />
           <Route index path="/recherche" element={<Search />} />
           <Route index path="/admin/*" element={<Dashboard />} />
+          <Route index path="/about" element={<About />} />
+          <Route index path="/question-frequente" element={<QstF />} />
+          <Route index path="/contactus" element={<Contactus />} />
         </Routes>
       </BrowserRouter>
     </div>
