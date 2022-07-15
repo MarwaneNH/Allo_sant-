@@ -13,12 +13,12 @@ function DateHeader() {
       minute: "numeric",
     };
     const frDate = date.toLocaleDateString("fr-FR", options);
-    console.log(frDate);
+
     const formatedDate = frDate.slice(0, 3) + ", " + frDate.slice(4, -8);
     const formatedTime = frDate.slice(-5);
     setTodayDate({ time: formatedTime, date: formatedDate });
   };
-  
+
   setTimeout(() => {
     toggleDate();
   }, 1000);
